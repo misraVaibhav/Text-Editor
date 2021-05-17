@@ -7,7 +7,7 @@ My first Java GUI based project based on **Notepad** from Windows 10.
 - Font dialog box added lets the user choose from all the fonts available on their particular machine.
 ## Installation
 - You must have [Java](https://www.java.com/en/download/) installed on your system.
-- Download this file and Double-Click on it to lauch the app.
+- Download [this](https://github.com/misraVaibhav/Text-Editor/blob/master/Editor.jar) file and Double-Click on it to lauch the app.
 - In case it is not working, or the **.jar** file is not recognised even after installing Java, do the following :
   - Download [these](https://www.dropbox.com/sh/xd3peupo92c4ejt/AAAzBN9rtbcuEqiC3xT3IILQa?dl=0) files and keep them in the same folder.
   - Double-Click on **Editor.bat**.
