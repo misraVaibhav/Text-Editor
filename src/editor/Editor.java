@@ -90,7 +90,7 @@ public class Editor extends JFrame {
 		mEditMenu = new JMenu("Edit");
 		mFormatMenu = new JMenu("Format");
 		mViewMenu = new JMenu("View");
-		mAboutMenu = new JMenu("About");
+		mHelpMenu = new JMenu("Help");
 		
 		mNew = new JMenuItem("New");
 		mOpen = new JMenuItem("Open");
@@ -112,6 +112,9 @@ public class Editor extends JFrame {
 		mEditMenu.add(mCut);
 		mEditMenu.add(mCopy);
 		mEditMenu.add(mPaste);
+
+		mAbout = new JMenuItem("About");
+		mHelpMenu.add(mAbout);
 		
 		mZoomItem = new JMenu("Zoom");
 		mZoomIn = new JMenuItem("Zoom In");
@@ -127,7 +130,7 @@ public class Editor extends JFrame {
 		mMenuBar.add(mEditMenu);
 		mMenuBar.add(mFormatMenu);
 		mMenuBar.add(mViewMenu);
-		mMenuBar.add(mAboutMenu);
+		mMenuBar.add(mHelpMenu);
 		return mMenuBar;
 	}
 	
@@ -144,7 +147,7 @@ public class Editor extends JFrame {
 		mEditMenu.setMnemonic(KeyEvent.VK_E);
 		mFormatMenu.setMnemonic(KeyEvent.VK_O);
 		mViewMenu.setMnemonic(KeyEvent.VK_V);
-		mAboutMenu.setMnemonic(KeyEvent.VK_A);
+		mHelpMenu.setMnemonic(KeyEvent.VK_A);
 	}
 	
 	private void setAccelerators(){
@@ -224,6 +227,10 @@ public class Editor extends JFrame {
 		
 		mFont.addActionListener(e->{
 			new FontDialog(this);
+		});
+
+		mAbout.addActionListener(e -> {
+			new About();
 		});
 		
 		mZoomIn.addActionListener(e->mTextArea.setFont(new Font("sansserif",Font.PLAIN,mFontSize += 2)));
@@ -341,7 +348,7 @@ public class Editor extends JFrame {
 	private JMenu mZoomItem;
 	private JMenu mViewMenu;
 	private JMenu mFormatMenu;
-	private JMenu mAboutMenu;
+	private JMenu mHelpMenu;
 	private JMenuItem mNew;
 	private JMenuItem mOpen;
 	private JMenuItem mSave;
@@ -353,6 +360,7 @@ public class Editor extends JFrame {
 	private JMenuItem mZoomIn;
 	private JMenuItem mZoomOut;
 	private JMenuItem mFont;
+	private JMenuItem mAbout;
 	private JTextArea mTextArea;
 	private JScrollPane mScrollPane;
 	private int mFontSize; 
